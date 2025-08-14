@@ -10,5 +10,28 @@ import 'package:nutri_criuse/presentation/pages/landing_screen.dart';
 import 'app_routes.dart';
 
 class AppPages {
-  
+  static const INITIAL = AppRoutes.LANDING;
+
+  static final routes = [
+    GetPage(
+      name: AppRoutes.LANDING,
+      page: () => LandingScreen(),
+      binding: LandingBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.HOME,
+      page: () => HomeScreen(),
+      binding: HomeBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.CHATBOT,
+      page: () => ChatbotScreen(),
+      binding: ChatbotBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.FORM,
+      page: () => FormScreen(),
+      binding: FormBinding(),
+    ),
+  ];
 }
