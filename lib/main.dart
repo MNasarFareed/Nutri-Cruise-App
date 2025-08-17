@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:get/get.dart';
 import 'package:nutri_criuse/app/routes/app_pages.dart';
+import 'package:nutri_criuse/presentation/pages/home_screen.dart';
 
 void main() {
-  DevicePreview(builder: (context) => MyApp(), enabled: !kReleaseMode);
+  runApp(
+    // DevicePreview(builder: (context) =>
+    const MyApp(),
+    // enabled: !kReleaseMode)
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData(primarySwatch: Colors.green),
       title: 'Nutri Cruise',
       debugShowCheckedModeBanner: false,
       //! Tells GetX which screen to
@@ -23,9 +29,8 @@ class MyApp extends StatelessWidget {
       getPages: AppPages.routes,
       //! Device Preview Specific settings
       //! (To test on different screen sizes)
-      useInheritedMediaQuery: true,
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
+      // useInheritedMediaQuery: true,
+      // builder: DevicePreview.appBuilder,
     );
   }
 }
