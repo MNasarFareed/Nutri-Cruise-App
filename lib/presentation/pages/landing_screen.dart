@@ -14,7 +14,7 @@ class LandingScreen extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/background.jpg"),
+            image: AssetImage("assets/images/intro_background.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -25,8 +25,8 @@ class LandingScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // ScaleTransition(
-                  // scale: controller.logoAnimation,
+                  SizedBox(height: 200),
+
                   Container(
                     height: 200,
                     width: 300,
@@ -37,20 +37,19 @@ class LandingScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // ),
-                  SizedBox(height: 50),
                   ScaleTransition(
                     scale: controller.textAnimation,
                     child: Text(
-                      "Track & Transform",
+                      "Track, Transform & Thrive",
                       style: TextStyle(
-                        fontSize: 25,
+                        fontFamily: 'Common',
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: const Color.fromARGB(255, 2, 12, 87),
+                        color: const Color.fromARGB(255, 0, 17, 143),
                       ),
                     ),
                   ),
-                  SizedBox(height: 50),
+                  SizedBox(height: 200),
                   Obx(() {
                     print(
                       "Loading Progress : ${controller.loadingProgress.value}",
