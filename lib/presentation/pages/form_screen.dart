@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
 
-class FormScreen extends StatefulWidget {
+class FormScreen extends StatelessWidget {
   const FormScreen({super.key});
   @override
-  _FormScreenState createState() => _FormScreenState();
-}
-
-class _FormScreenState extends State<FormScreen> {
-  @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Column());
+    return Scaffold(
+      // appBar: AppBar(centerTitle: true, title: Text("Nutri Cruise")),
+      body: Center(
+        child: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/default_background.jpeg'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [],
+          ),
+        ),
+      ),
+    );
   }
 }

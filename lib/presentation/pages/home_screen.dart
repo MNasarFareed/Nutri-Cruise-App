@@ -5,19 +5,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          "Nutri Cruise",
-          style: TextStyle(
-            fontSize: 20,
-            color: const Color.fromARGB(255, 0, 0, 0),
-            fontWeight: FontWeight.bold,
+      // appBar: AppBar(centerTitle: true, title: Text("Nutri Cruise")),
+      body: Center(
+        child: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/default_background.jpeg'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [],
           ),
         ),
       ),
-      body: SafeArea(child: Column(children: [Text('Nasar')])),
     );
   }
 }

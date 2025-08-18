@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
 
-class ChatbotScreen extends StatefulWidget {
+class ChatbotScreen extends StatelessWidget {
   const ChatbotScreen({super.key});
   @override
-  _ChatbotScreenState createState() => _ChatbotScreenState();
-}
-
-class _ChatbotScreenState extends State<ChatbotScreen> {
-  @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Column());
+    return Scaffold(
+      // appBar: AppBar(centerTitle: true, title: Text("Nutri Cruise")),
+      body: Center(
+        child: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/default_background.jpeg'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [],
+          ),
+        ),
+      ),
+    );
   }
 }

@@ -5,6 +5,7 @@ import 'package:nutri_criuse/app/bindings/form_binding.dart';
 import 'package:nutri_criuse/app/bindings/landing_binding.dart';
 import 'package:nutri_criuse/app/bindings/welcome_binding.dart';
 import 'package:nutri_criuse/presentation/pages/home_screen.dart';
+import 'package:nutri_criuse/presentation/pages/welcome_screen.dart';
 import 'package:nutri_criuse/presentation/pages/form_screen.dart';
 import 'package:nutri_criuse/presentation/pages/chatbot_screen.dart';
 import 'package:nutri_criuse/presentation/pages/landing_screen.dart';
@@ -19,13 +20,13 @@ class AppPages {
       name: AppRoutes.LANDING,
       page: () => LandingScreen(),
       binding: LandingBinding(),
-      transition: Transition.circularReveal,
+      transition: Transition.fade,
     ),
     GetPage(
       name: AppRoutes.WELCOME,
       page: () => WelcomeScreen(),
       binding: WelcomeBinding(),
-      transition: Transition.circularReveal,
+      transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.HOME,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:nutri_criuse/app/controllers/app_controller.dart';
 
 class LandingController extends GetxController
     with GetTickerProviderStateMixin {
@@ -48,8 +49,6 @@ class LandingController extends GetxController
     _initializeApp();
   }
 
- 
-
   Future<void> _initializeApp() async {
     loadingText.value = "Setting up services....";
     updateProgress(0.1);
@@ -71,7 +70,12 @@ class LandingController extends GetxController
     updateProgress(1.2);
     await Future.delayed(Duration(seconds: 1));
 
-    Get.offNamed("/welcome");
+    final AppController appController = Get.find();
+    if (appController.isFirstTime.value == true) {
+      Get.offNamed('/welcome');
+    } else {
+      Get.offNamed('/home');
+    }
   }
 
   @override
