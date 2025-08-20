@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:nutri_criuse/app/controllers/landing_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppController extends GetxController {
@@ -7,6 +8,7 @@ class AppController extends GetxController {
   @override
   void inInit() {
     super.onInit();
+    Get.put(LandingController());
     checkFirstTime();
   }
 

@@ -37,6 +37,8 @@ class LandingController extends GetxController
 
   @override
   void onInit() {
+    print("Landing controller onInit Called");
+
     super.onInit();
     textController = AnimationController(
       vsync: this,
