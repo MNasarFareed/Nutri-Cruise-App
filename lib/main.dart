@@ -8,7 +8,9 @@ import 'package:nutri_criuse/app/routes/app_pages.dart';
 void main() {
   Get.put(AppController());
   runApp(
-    DevicePreview(builder: (context) => const MyApp(), enabled: !kReleaseMode),
+    // DevicePreview(builder: (context) => 
+    const MyApp(),
+    //  enabled: !kReleaseMode),
   );
 }
 

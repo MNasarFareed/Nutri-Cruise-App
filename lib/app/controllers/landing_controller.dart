@@ -52,21 +52,18 @@ class LandingController extends GetxController
   }
 
   Future<void> _initializeApp() async {
-    loadingText.value = "Setting up services....";
+    
+    loadingText.value = "Connecting to server....";
     updateProgress(0.1);
     await Future.delayed(Duration(seconds: 1));
 
-    loadingText.value = "Connecting to server....";
-    updateProgress(0.4);
-    await Future.delayed(Duration(seconds: 3));
-
     loadingText.value = "Preparing AI assistant....";
-    updateProgress(0.6);
-    await Future.delayed(Duration(seconds: 2));
+    updateProgress(0.5);
+    await Future.delayed(Duration(seconds: 1));
 
     loadingText.value = "Resolving Dependencies";
     updateProgress(0.8);
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 1));
 
     loadingText.value = "Ready to Cruise....";
     updateProgress(1.2);
