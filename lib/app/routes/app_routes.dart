@@ -1,7 +1,7 @@
 class AppRoutes {
-  static const String LANDING = '/landing';
-  static const String WELCOME = '/welcome';
-  static const String HOME = '/home';
-  static const String CHATBOT = '/chatbot';
-  static const String FORM = '/form';
+  static const String landing = '/landing';
+  static const String intro = '/intro';
+  static const String home = '/home';
+  static const String chatbot = '/chatbot';
+  static const String form = '/form';
 }

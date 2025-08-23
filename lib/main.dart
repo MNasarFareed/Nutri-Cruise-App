@@ -2,15 +2,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:get/get.dart';
-import 'package:nutri_criuse/app/controllers/app_controller.dart';
 import 'package:nutri_criuse/app/routes/app_pages.dart';
 
 void main() {
-  Get.put(AppController());
   runApp(
-    // DevicePreview(builder: (context) => 
+    DevicePreview(builder: (context) => 
     const MyApp(),
-    //  enabled: !kReleaseMode),
+     enabled: !kReleaseMode),
   );
 }
 
@@ -37,13 +35,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //! Tells GetX which screen to
       //! show when app starts
-      initialRoute: AppPages.INITIAL,
+      initialRoute: AppPages.initial,
       //! Provides all Available routes to GetX
       getPages: AppPages.routes,
       //! Device Preview Specific settings
       //! (To test on different screen sizes)
-      // useInheritedMediaQuery: true,
-      // builder: DevicePreview.appBuilder,
+      useInheritedMediaQuery: true,
+      builder: DevicePreview.appBuilder,
     );
   }
 }
